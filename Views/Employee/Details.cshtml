@@ -1,0 +1,27 @@
+﻿@model  WebApplication4.Employee
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Employee Details</h2>
+<table style="font-family:Arial">
+    <tr>
+        <td>Employee ID:</td>
+        <td>@Model.EmployeeId </td>
+    </tr>
+    <tr>
+        <td>Name:</td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td>Gender:</td>
+        <td>@Model.Gender</td>
+    </tr>
+    <tr>
+        <td>City:</td>
+        <td>@Model.City</td>
+    </tr>
+</table>
+<p>
+    @Html.ActionLink("Back to Employee List", "Index", new { departmentId = @Model.DepartmentId })
+</p>
